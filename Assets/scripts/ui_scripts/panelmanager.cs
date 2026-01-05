@@ -10,10 +10,15 @@ public class panelmanager : MonoBehaviour
         completeUI?.SetActive(false);
         pauseUI?.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void PauseGame()
     {
-        
+        Time.timeScale = 0f;
+        pauseUI?.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        pauseUI?.SetActive(false);
     }
 }
