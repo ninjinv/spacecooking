@@ -132,10 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff1ddd7a5bf5024ca0c5fd524110f3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Food
-  minLaunchForce: 7
-  maxLaunchForce: 13
-  minUpwardSpeed: 6
-  maxUpwardSpeed: 9
+  minLaunchForce: 6
+  maxLaunchForce: 11
+  minUpwardSpeed: 5
+  maxUpwardSpeed: 8
+  GroundFoodDetectorPrefab: {fileID: 0}
 --- !u!68 &1833137643243339499
 EdgeCollider2D:
   m_ObjectHideFlags: 0

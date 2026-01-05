@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    public float minLaunchForce = 4f;
-    public float maxLaunchForce = 6f;
+    public float minLaunchForce = 2f;
+    public float maxLaunchForce = 4f;
 
-    public float minUpwardSpeed = 7f;
-    public float maxUpwardSpeed = 9f;
+    public float minUpwardSpeed = 6f;
+    public float maxUpwardSpeed = 8f;
+
+    public GameObject GroundFoodDetectorPrefab;
     private Transform launchPoint;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,6 +43,20 @@ public class Food : MonoBehaviour
         else
         {
             Debug.LogError("No Rigidbody2D attached to this object!");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Log the name of the object that entered the trigger
+        Debug.Log("Trigger entered by: " + other.gameObject.name);
+
+        // You can use a tag to check for specific objects (e.g., "Player")
+        if (other.CompareTag("Ground Food Detector"))
+        {
+            Debug.Log("Player detected! Initiating event...");
+            Destroy(gameObject);
+            // Add your custom logic here (e.g., load a new scene, give health)
         }
     }
 }
