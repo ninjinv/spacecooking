@@ -146,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 432858913}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.23, y: 0.8, z: 0}
+  m_LocalPosition: {x: -8.36, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -164,7 +164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de689b32246823f4281d3c4de42e4e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades
-  projectilePrefab: {fileID: 4431372231933208952, guid: a2c277cd9f319e14c89a5f8c618a6be6, type: 3}
+  projectilePrefabList:
+  - {fileID: 4431372231933208952, guid: a2c277cd9f319e14c89a5f8c618a6be6, type: 3}
+  - {fileID: 4431372231933208952, guid: 68f1441a4ededea44b5ecd80c0d44f72, type: 3}
+  - {fileID: 4431372231933208952, guid: 4d77573c6abe5564694612dfcc54cfdd, type: 3}
+  - {fileID: 4431372231933208952, guid: d60e12e022280084c854ff3f323ea49b, type: 3}
 --- !u!61 &432858916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -199,7 +203,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.21239376, y: -0.1840744}
+  m_Offset: {x: 0.21239376, y: -0.16994226}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -209,7 +213,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.91, y: 7.0886097}
+  m_Size: {x: 1.9099998, y: 4.7426786}
   m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
@@ -444,7 +448,7 @@ GameObject:
   - component: {fileID: 886621277}
   - component: {fileID: 886621276}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Ground Food Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -480,7 +484,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

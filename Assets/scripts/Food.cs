@@ -1,10 +1,14 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
+
 
 public class Food : MonoBehaviour
 {
-    public float LaunchForce = 10f;
-    public float UpwardSpeed = 8f;
+    public float minLaunchForce = 4f;
+    public float maxLaunchForce = 6f;
+
+    public float minUpwardSpeed = 7f;
+    public float maxUpwardSpeed = 9f;
     private Transform launchPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,10 +28,11 @@ public class Food : MonoBehaviour
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
+            float LaunchForce = Random.Range(minLaunchForce, maxLaunchForce);
+            float UpwardSpeed = Random.Range(minUpwardSpeed, maxUpwardSpeed);
+
             // Use transform.right for 2D "forward" direction, and Vector2.up for upward
             Vector2 force = (Vector2)launchPoint.right * LaunchForce + Vector2.up * UpwardSpeed;
-
-            Debug.Log(force);
 
             // Apply the force instantly
             rb.AddForce(force, ForceMode2D.Impulse);

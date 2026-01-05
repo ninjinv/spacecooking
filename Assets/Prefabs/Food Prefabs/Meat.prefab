@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4620781731321651749}
   - component: {fileID: 6238109970333160635}
   m_Layer: 0
-  m_Name: Mushroom
+  m_Name: Meat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: e492f753ecfcc944da163e50575f3d06, type: 3}
-  m_Color: {r: 0.44313726, g: 0.09480801, b: 0.094117634, a: 1}
+  m_Color: {r: 1, g: 0.30796453, b: 0.26226407, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -144,7 +144,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -168,5 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff1ddd7a5bf5024ca0c5fd524110f3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Food
-  LaunchForce: 7
-  UpwardSpeed: 6
+  minLaunchForce: 7
+  maxLaunchForce: 13
+  minUpwardSpeed: 6
+  maxUpwardSpeed: 9
