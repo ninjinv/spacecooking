@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6238109970333160635}
   m_Layer: 0
   m_Name: Mushroom
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,4 +172,4 @@ MonoBehaviour:
   maxLaunchForce: 11
   minUpwardSpeed: 5
   maxUpwardSpeed: 8
-  GroundFoodDetectorPrefab: {fileID: 0}
+  GroundFoodDetectorPrefab: {fileID: 5005713008043633660, guid: c903a6f89e998284780939d884f753a7, type: 3}

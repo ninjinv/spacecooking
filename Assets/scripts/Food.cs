@@ -46,17 +46,12 @@ public class Food : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // Log the name of the object that entered the trigger
-        Debug.Log("Trigger entered by: " + other.gameObject.name);
-
-        // You can use a tag to check for specific objects (e.g., "Player")
-        if (other.CompareTag("Ground Food Detector"))
+        Debug.Log(other.tag);
+        if (other.CompareTag("GroundFoodDetector"))
         {
-            Debug.Log("Player detected! Initiating event...");
             Destroy(gameObject);
-            // Add your custom logic here (e.g., load a new scene, give health)
         }
     }
 }

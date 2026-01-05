@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Food
+  - GroundFoodDetector
   - Ground Food Detector
   layers:
   - Default
@@ -12,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - test
   - 
   - 
   - 

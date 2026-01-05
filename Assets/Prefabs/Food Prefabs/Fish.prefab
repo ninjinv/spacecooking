@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1833137643243339499}
   m_Layer: 0
   m_Name: Fish
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   maxLaunchForce: 11
   minUpwardSpeed: 5
   maxUpwardSpeed: 8
-  GroundFoodDetectorPrefab: {fileID: 0}
+  GroundFoodDetectorPrefab: {fileID: 5005713008043633660, guid: c903a6f89e998284780939d884f753a7, type: 3}
 --- !u!68 &1833137643243339499
 EdgeCollider2D:
   m_ObjectHideFlags: 0
