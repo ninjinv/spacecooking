@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 432858913}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.24, y: 1.21, z: 0}
+  m_LocalPosition: {x: -9.12, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -164,7 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades
   projectilePrefab: {fileID: 4431372231933208952, guid: a2c277cd9f319e14c89a5f8c618a6be6, type: 3}
-  LaunchForce: 70
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,8 +516,8 @@ Transform:
   m_GameObject: {fileID: 886621275}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4382, y: -1.87954, z: 0}
-  m_LocalScale: {x: 6.4797, y: 1, z: 1}
+  m_LocalPosition: {x: -0.09, y: -4.51, z: 0}
+  m_LocalScale: {x: 18.624601, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
