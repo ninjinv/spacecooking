@@ -15,7 +15,8 @@ public class scene_switch : MonoBehaviour
 
     public void Mainmenu()
     {
-        SceneManager.LoadScene("mainmenu");
+        //SceneManager.LoadScene("mainmenu");
+        Debug.Log("Mainmenu scene loading is disabled for testing purposes.");
     }
 
     public void Settings()

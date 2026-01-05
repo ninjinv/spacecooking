@@ -8,7 +8,7 @@ public class panelmanager : MonoBehaviour
     void Start()
     {
         completeUI?.SetActive(false);
-        pauseUI?.SetActive(false);
+
     }
     public void PauseGame()
     {
