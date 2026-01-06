@@ -177,5 +177,5 @@ MonoBehaviour:
   OnPlate: 0
   timer: 6
   CookedTime: 3
-  CookedColor: {r: 0.20784314, g: 0.09411766, b: 0.09411766, a: 0}
+  CookedColor: {r: 0.20784314, g: 0.09411766, b: 0.09411766, a: 1}
   BurnedColor: {r: 0, g: 0, b: 0, a: 1}
