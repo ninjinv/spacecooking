@@ -11,6 +11,9 @@ public class Food : MonoBehaviour
     public float minUpwardSpeed = 6f;
     public float maxUpwardSpeed = 8f;
 
+    private AudioSource audioSource; 
+    public AudioClip LaunchSoundEffect;
+
     public GameObject GroundFoodDetectorPrefab;
     private Transform launchPoint;
 
@@ -23,10 +26,12 @@ public class Food : MonoBehaviour
     public Color BurnedColor = new Color(0f, 0f, 0f, 1f);
     private SpriteRenderer spriteRenderer;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         launchPoint = transform;
         LaunchFood();
     }
@@ -63,6 +68,10 @@ public class Food : MonoBehaviour
 
             // Use transform.right for 2D "forward" direction, and Vector2.up for upward
             Vector2 force = (Vector2)launchPoint.right * LaunchForce + Vector2.up * UpwardSpeed;
+
+            if (LaunchSoundEffect != null && audioSource != null) {
+                audioSource.PlayOneShot(LaunchSoundEffect);
+            }
 
             // Apply the force instantly
             rb.AddForce(force, ForceMode2D.Impulse);

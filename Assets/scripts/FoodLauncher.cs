@@ -12,7 +12,7 @@ public class FoodLauncher : MonoBehaviour
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
-        // StartCoroutine(Countdown());
+        StartCoroutine(Countdown());
     }
 
     // Update is called once per frame

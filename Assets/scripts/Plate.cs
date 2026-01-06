@@ -5,10 +5,15 @@ public class Plate : MonoBehaviour
 {
     private Rigidbody2D rb;
 
+    private AudioSource audioSource; 
+    public AudioClip PlateSlideIn;
+    public AudioClip PlateSlideOut;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,6 +44,9 @@ public class Plate : MonoBehaviour
         Vector2 target = start + Vector2.right * 2f;
         float speed = 3f;
 
+        if (PlateSlideOut != null && audioSource != null) {
+            audioSource.PlayOneShot(PlateSlideOut);
+        }
         while (Vector2.Distance(rb.position, target) > 0.01f)
         {
             rb.MovePosition(Vector2.MoveTowards(
@@ -49,7 +57,12 @@ public class Plate : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
+
         Destroy(transform.GetChild(0).gameObject);
+
+        if (PlateSlideIn != null && audioSource != null) {
+            audioSource.PlayOneShot(PlateSlideIn);
+        }
         while (Vector2.Distance(rb.position, start) > 0.01f)
         {
             rb.MovePosition(Vector2.MoveTowards(
