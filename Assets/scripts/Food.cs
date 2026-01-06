@@ -14,6 +14,8 @@ public class Food : MonoBehaviour
     public GameObject GroundFoodDetectorPrefab;
     private Transform launchPoint;
 
+    public bool OnPlate = false;
+
     private bool Countdown = false;
     public float timer = 6f;
     public float CookedTime = 3f;
@@ -32,7 +34,7 @@ public class Food : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Countdown) {
+        if (Countdown && !OnPlate) {
             if (timer > 0)
             {
                 timer -= Time.deltaTime;
@@ -77,9 +79,11 @@ public class Food : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (other.collider.CompareTag("Pan"))
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Pan"))
         {
-            Debug.Log("OnPan");
             Countdown = true;
         }
     }
