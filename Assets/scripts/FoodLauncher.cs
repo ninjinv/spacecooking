@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,21 +7,30 @@ public class FoodLauncher : MonoBehaviour
     public List<GameObject> projectilePrefabList;
     private BoxCollider2D boxCollider;
 
-    public 
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        // StartCoroutine(Countdown());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     SpawnFood();
+        // }
+    }
+
+    IEnumerator Countdown()
+    {
+        while (true)
         {
+            yield return new WaitForSeconds(0.7f);
             SpawnFood();
+
         }
     }
 
@@ -38,7 +48,5 @@ public class FoodLauncher : MonoBehaviour
         GameObject projectilePrefab = projectilePrefabList[PrefabListIndex];
 
         Instantiate(projectilePrefab, spawnPosition, transform.rotation);
-
-        Debug.Log($"Spawned projectile at {spawnPosition}");
     }
 }

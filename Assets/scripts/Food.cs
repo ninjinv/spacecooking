@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 
 
@@ -13,9 +14,17 @@ public class Food : MonoBehaviour
     public GameObject GroundFoodDetectorPrefab;
     private Transform launchPoint;
 
+    private bool Countdown = false;
+    public float timer = 6f;
+    public float CookedTime = 3f;
+    public Color CookedColor;
+    public Color BurnedColor = new Color(0f, 0f, 0f, 1f);
+    private SpriteRenderer spriteRenderer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         launchPoint = transform;
         LaunchFood();
     }
@@ -23,7 +32,23 @@ public class Food : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Countdown) {
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+                Debug.Log(timer);
+                if (timer <= CookedTime)
+                {
+                    Debug.Log("cooked");
+                    spriteRenderer.color = CookedColor;
+                }
+            }
+            else
+            {
+                Debug.Log("burned");
+                spriteRenderer.color = BurnedColor;
+            }
+        }
     }
 
     void LaunchFood()
@@ -46,12 +71,16 @@ public class Food : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log(other.tag);
-        if (other.CompareTag("GroundFoodDetector"))
+        if (other.collider.CompareTag("GroundFoodDetector"))
         {
             Destroy(gameObject);
+        }
+        if (other.collider.CompareTag("Pan"))
+        {
+            Debug.Log("OnPan");
+            Countdown = true;
         }
     }
 }

@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Food
   - GroundFoodDetector
-  - Ground Food Detector
+  - Pan
   layers:
   - Default
   - TransparentFX
