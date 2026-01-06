@@ -9,6 +9,8 @@ public class Plate : MonoBehaviour
     public AudioClip PlateSlideIn;
     public AudioClip PlateSlideOut;
 
+    public pointTracker pointTracker;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,6 +34,28 @@ public class Plate : MonoBehaviour
             other.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
             Food FoodScript = other.GetComponent<Food>();
             FoodScript.OnPlate = true;
+
+            if(FoodScript.howCookedAmI == Food.cookedStates.underCooked)
+            {
+                Debug.Log("Undercooked!");
+                pointTracker.updatePoints(-50);
+            }
+            else if (FoodScript.howCookedAmI == Food.cookedStates.perfectCooked)
+            {
+                Debug.Log("PERFECT!");
+                pointTracker.updatePoints(100);
+            }
+            if (FoodScript.howCookedAmI == Food.cookedStates.overCooked)
+            {
+                Debug.Log("Overcooked!");
+                pointTracker.updatePoints(25);
+            }
+            if (FoodScript.howCookedAmI == Food.cookedStates.burnt)
+            {
+                Debug.Log("BURNT!");
+                pointTracker.updatePoints(-50);
+            }
+
             StartCoroutine(PlateCountdown());
 
         }

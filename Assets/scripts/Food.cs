@@ -1,7 +1,4 @@
-using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
-
 
 public class Food : MonoBehaviour
 {
@@ -22,10 +19,20 @@ public class Food : MonoBehaviour
     private bool Countdown = false;
     public float timer = 6f;
     public float CookedTime = 3f;
-    public Color CookedColor;
-    public Color BurnedColor = new Color(0f, 0f, 0f, 1f);
+    public float overCookedTime = 1.5f;
     private SpriteRenderer spriteRenderer;
 
+    public Sprite underCookedSprite;
+    public Sprite perfectCookedSprite;
+    public Sprite overCookedSprite;
+    public Sprite burntSprite;
+
+    public enum cookedStates
+    {
+        underCooked, perfectCooked, overCooked, burnt
+    }
+
+    public cookedStates howCookedAmI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,22 +46,52 @@ public class Food : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Countdown && !OnPlate) {
+        //if the food is currently touching the pan and is not on a plate, aka its cooking
+        if (Countdown && !OnPlate) 
+        {
+            //if its not burnt yet (timer less than 0)
             if (timer > 0)
             {
+                //cooking the food
                 timer -= Time.deltaTime;
-                Debug.Log(timer);
+
+                //the food has cooked the correct amount of time, so the food is updated to being perfectly cooked
                 if (timer <= CookedTime)
                 {
-                    Debug.Log("cooked");
-                    spriteRenderer.color = CookedColor;
+                    howCookedAmI = cookedStates.perfectCooked;
+                }
+
+                //the food has cooked longer than perfect, so the food is updated to being overcooked
+                if (timer <= overCookedTime)
+                {
+                    howCookedAmI = cookedStates.overCooked;
                 }
             }
+
+            //timer has passed 0, the food is updated to being overcooked
             else
             {
-                Debug.Log("burned");
-                spriteRenderer.color = BurnedColor;
+                howCookedAmI = cookedStates.burnt;
             }
+        }
+
+        switch (howCookedAmI)
+        {
+            case cookedStates.underCooked:
+                spriteRenderer.sprite = underCookedSprite;
+                break;
+
+            case cookedStates.perfectCooked:
+                spriteRenderer.sprite = perfectCookedSprite;
+                break;
+
+            case cookedStates.overCooked:
+                spriteRenderer.sprite = overCookedSprite;
+                break;
+
+            case cookedStates.burnt:
+                spriteRenderer.sprite = burntSprite;
+                break;
         }
     }
 
@@ -82,6 +119,7 @@ public class Food : MonoBehaviour
         }
     }
 
+    //if the food falls outside of the game window
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.CompareTag("GroundFoodDetector"))
@@ -89,11 +127,22 @@ public class Food : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    //if the food is touching the pan, it starts the cooking countdown
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Pan"))
+        if (other.CompareTag("Pan") && !Countdown)
         {
             Countdown = true;
+        }
+    }
+
+    //if the food stops touching the pan, it stops the cooking countdown
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.CompareTag("Pan") && Countdown)
+        {
+            Countdown = false;
+            Debug.Log(timer);
         }
     }
 }
