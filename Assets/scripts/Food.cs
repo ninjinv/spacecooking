@@ -26,6 +26,17 @@ public class Food : MonoBehaviour
     public Color BurnedColor = new Color(0f, 0f, 0f, 1f);
     private SpriteRenderer spriteRenderer;
 
+    public Sprite underCookedSprite;
+    public Sprite perfectCookedSprite;
+    public Sprite overCookedSprite;
+    public Sprite burntSprite;
+
+    public enum cookedStates
+    {
+        underCooked, perfeftCooked, overCooked, burnt
+    }
+
+    public cookedStates howCookedAmI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,7 +50,8 @@ public class Food : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Countdown && !OnPlate) {
+        if (Countdown && !OnPlate) 
+        {
             if (timer > 0)
             {
                 timer -= Time.deltaTime;
@@ -55,6 +67,25 @@ public class Food : MonoBehaviour
                 Debug.Log("burned");
                 spriteRenderer.color = BurnedColor;
             }
+        }
+
+        switch (howCookedAmI)
+        {
+            case cookedStates.underCooked:
+                //undercooked
+                break;
+
+            case cookedStates.perfeftCooked:
+                //undercooked
+                break;
+
+            case cookedStates.overCooked:
+                //undercooked
+                break;
+
+            case cookedStates.burnt:
+                //undercooked
+                break;
         }
     }
 
