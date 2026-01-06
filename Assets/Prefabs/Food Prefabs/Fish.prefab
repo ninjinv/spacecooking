@@ -137,6 +137,10 @@ MonoBehaviour:
   minUpwardSpeed: 5
   maxUpwardSpeed: 8
   GroundFoodDetectorPrefab: {fileID: 5005713008043633660, guid: c903a6f89e998284780939d884f753a7, type: 3}
+  timer: 6
+  CookedTime: 3
+  CookedColor: {r: 0, g: 0, b: 0, a: 0}
+  BurnedColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!68 &1833137643243339499
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -172,7 +176,7 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.02
   m_Points:
   - {x: -0.5, y: 0}
   - {x: -0.49227285, y: 0.13027787}
