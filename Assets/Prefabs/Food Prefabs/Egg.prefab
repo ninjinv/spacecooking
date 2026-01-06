@@ -243,7 +243,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
@@ -263,4 +263,10 @@ MonoBehaviour:
   maxLaunchForce: 11
   minUpwardSpeed: 5
   maxUpwardSpeed: 9
+  LaunchSoundEffect: {fileID: 0}
   GroundFoodDetectorPrefab: {fileID: 5005713008043633660, guid: c903a6f89e998284780939d884f753a7, type: 3}
+  OnPlate: 0
+  timer: 6
+  CookedTime: 3
+  CookedColor: {r: 0, g: 0, b: 0, a: 0}
+  BurnedColor: {r: 0, g: 0, b: 0, a: 1}
