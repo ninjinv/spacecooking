@@ -173,7 +173,6 @@ MonoBehaviour:
   maxLaunchForce: 10
   minUpwardSpeed: 5
   maxUpwardSpeed: 8
-  LaunchSoundEffect: {fileID: 8300000, guid: a54baf856915d784b8f59eb3635aed5f, type: 3}
   GroundFoodDetectorPrefab: {fileID: 5005713008043633660, guid: c903a6f89e998284780939d884f753a7, type: 3}
   OnPlate: 0
   timer: 6
@@ -191,8 +190,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_Resource: {fileID: 8300000, guid: a54baf856915d784b8f59eb3635aed5f, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
