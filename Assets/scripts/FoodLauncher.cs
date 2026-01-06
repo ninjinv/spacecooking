@@ -12,16 +12,16 @@ public class FoodLauncher : MonoBehaviour
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
-        StartCoroutine(Countdown());
+        //StartCoroutine(Countdown());
     }
 
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.Space))
-        // {
-        //     SpawnFood();
-        // }
+         if (Input.GetKeyDown(KeyCode.Space))
+         {
+             SpawnFood();
+         }
     }
 
     IEnumerator Countdown()
