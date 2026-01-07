@@ -7,6 +7,8 @@ public class pointTracker : MonoBehaviour
     public Text HealthText;
     public int Health = 20;
 
+    public GameObject YouLoseUI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public int playerPoints = 0;
@@ -25,6 +27,11 @@ public class pointTracker : MonoBehaviour
         //     Debug.Log(playerPoints);
         // }
         HealthText.text = "Health: " + Health;
+
+        if (Health <= 0)
+        {
+            YouLoseUI.SetActive(true);
+        }
     }
 
     public void updatePoints(int points)
