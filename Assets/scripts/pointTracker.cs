@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class pointTracker : MonoBehaviour
 {
+    public Text ScoreText;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public int playerPoints = 0;
@@ -25,6 +28,7 @@ public class pointTracker : MonoBehaviour
     {
         playerPoints = playerPoints + points;
         Debug.Log("Points: " + playerPoints);
+        ScoreText.text = "Score: " + playerPoints;
 
         if (playerPoints >= nextLevelUp)
         {

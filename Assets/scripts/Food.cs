@@ -75,23 +75,26 @@ public class Food : MonoBehaviour
             }
         }
 
-        switch (howCookedAmI)
-        {
-            case cookedStates.underCooked:
-                spriteRenderer.sprite = underCookedSprite;
-                break;
+        Debug.Log(underCookedSprite);
+        if (underCookedSprite != null) {
+            switch (howCookedAmI)
+            {
+                case cookedStates.underCooked:
+                    spriteRenderer.sprite = underCookedSprite;
+                    break;
 
-            case cookedStates.perfectCooked:
-                spriteRenderer.sprite = perfectCookedSprite;
-                break;
+                case cookedStates.perfectCooked:
+                    spriteRenderer.sprite = perfectCookedSprite;
+                    break;
 
-            case cookedStates.overCooked:
-                spriteRenderer.sprite = overCookedSprite;
-                break;
+                case cookedStates.overCooked:
+                    spriteRenderer.sprite = overCookedSprite;
+                    break;
 
-            case cookedStates.burnt:
-                spriteRenderer.sprite = burntSprite;
-                break;
+                case cookedStates.burnt:
+                    spriteRenderer.sprite = burntSprite;
+                    break;
+            }
         }
     }
 
