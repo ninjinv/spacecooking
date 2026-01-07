@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PanTestScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/FoodTestScene.unity
+    guid: e33c8a8275a1b5d40b504671ebcf9a04
+  - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: f948e749e63a0f543afa3839789ffd62
+  - enabled: 1
+    path: Assets/Scenes/PauseScene.unity
+    guid: 4d07178bd6e89fa41a66d08fd330f6c6
+  - enabled: 1
+    path: Assets/Scenes/UiTestScene.unity
+    guid: e0579b10078dd6e4da9d4466d99bc588
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

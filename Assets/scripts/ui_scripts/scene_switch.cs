@@ -21,12 +21,18 @@ public class scene_switch : MonoBehaviour
 
     public void Settings()
     {
-        SceneManager.LoadScene("settings");
+        // SceneManager.LoadScene("settings");
     }
 
     public void QuitGame()
     {
-        Application.Quit();
         Debug.Log("Quit game"); // Works only in build
+        Application.Quit();
+    }
+
+    // Move Scene
+    public void MoveScene(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName);
     }
 }
