@@ -7,6 +7,7 @@ public class FoodLauncher : MonoBehaviour
     public List<GameObject> projectilePrefabList;
     private BoxCollider2D boxCollider;
     public GameObject pointTracker;
+    public float TimeBetweenLaunch = 1.5f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,19 +20,15 @@ public class FoodLauncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if (Input.GetKeyDown(KeyCode.Space))
-         {
-             SpawnFood();
-         }
+
     }
 
     IEnumerator Countdown()
     {
         while (true)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(TimeBetweenLaunch);
             SpawnFood();
-
         }
     }
 
@@ -48,8 +45,8 @@ public class FoodLauncher : MonoBehaviour
         int PrefabListIndex = Random.Range(0, projectilePrefabList.Count);
         GameObject projectilePrefab = projectilePrefabList[PrefabListIndex];
 
+        // Spawn Food Projectile
         GameObject FoodProjectile = Instantiate(projectilePrefab, spawnPosition, transform.rotation);
-
         FoodProjectile.GetComponent<Food>().SetPointTracker(pointTracker);
     }
 }
