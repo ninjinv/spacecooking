@@ -63,7 +63,7 @@ public class Plate : MonoBehaviour
 
     IEnumerator PlateCountdown()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.7f);
         Vector2 start = rb.position;
         Vector2 target = start + Vector2.right * 2f;
         float speed = 3f;
