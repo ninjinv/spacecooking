@@ -2764,6 +2764,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 364
       objectReference: {fileID: 0}
+    - target: {fileID: 4084022316537239466, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: GameScene
+      objectReference: {fileID: 0}
     - target: {fileID: 5078767205808929816, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
       propertyPath: pauseUI
       value: 
@@ -3054,7 +3058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8796908501821810638, guid: c903a6f89e998284780939d884f753a7, type: 3}
       propertyPath: m_Offset.y
-      value: -0.29023463
+      value: -1.39
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7143780890437030031, guid: c903a6f89e998284780939d884f753a7, type: 3}
