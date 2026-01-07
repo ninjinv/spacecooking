@@ -8,9 +8,10 @@ public class scene_switch : MonoBehaviour
         SceneManager.LoadScene("placegolder*");
     }
 
-    public void resume(GameObject ResumeCanves)
+    public void resume(GameObject PauseCanves)
     {
-        ResumeCanves.SetActive(false);
+        Time.timeScale = 1f;
+        PauseCanves.SetActive(false);
     }
 
     public void Mainmenu()
@@ -32,6 +33,7 @@ public class scene_switch : MonoBehaviour
 
     public void PauseGame(GameObject PauseCanves)
     {
+        Time.timeScale = 0f;
         PauseCanves.SetActive(true);
     }
 
