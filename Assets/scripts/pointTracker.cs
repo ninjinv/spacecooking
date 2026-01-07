@@ -37,7 +37,7 @@ public class pointTracker : MonoBehaviour
     public void updatePoints(int points)
     {
         playerPoints += points;
-        ScoreText.text = "Score: " + playerPoints;
+        ScoreText.text = "XP: " + playerPoints;
 
         if (playerPoints >= nextLevelUp)
         {
