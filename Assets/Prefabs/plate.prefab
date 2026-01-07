@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.3825, z: 0}
-  m_LocalScale: {x: 0.79494, y: 0.19866419, z: 0.79494}
+  m_LocalScale: {x: 0.6, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,12 +83,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 4918051729378971685, guid: 0a2a80d153c843a4896d64471525efcc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -128,8 +128,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.00000023841858}
-  m_Radius: 0.5
+  m_Offset: {x: -0.000000066800204, y: -0.00000024319303}
+  m_Radius: 0.168013
 --- !u!82 &8482325184088364396
 AudioSource:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.5830889
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -241,6 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Plate
   PlateSlideIn: {fileID: 8300000, guid: 848060f12ac9e9943a2f9896de1bb323, type: 3}
   PlateSlideOut: {fileID: 8300000, guid: f240886a36995074bb16c6977a2d391d, type: 3}
+  pointTracker: {fileID: 0}
 --- !u!50 &5824006300055320729
 Rigidbody2D:
   serializedVersion: 5
