@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class pointTracker : MonoBehaviour
 {
     public Text ScoreText;
+    public Text HealthText;
+    public int Health = 20;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -22,6 +24,7 @@ public class pointTracker : MonoBehaviour
         {
             Debug.Log(playerPoints);
         }
+        HealthText.text = "Health: " + Health;
     }
 
     public void updatePoints(int points)

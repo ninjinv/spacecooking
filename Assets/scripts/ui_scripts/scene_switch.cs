@@ -8,9 +8,9 @@ public class scene_switch : MonoBehaviour
         SceneManager.LoadScene("placegolder*");
     }
 
-    public void resume()
+    public void resume(GameObject ResumeCanves)
     {
-
+        ResumeCanves.SetActive(false);
     }
 
     public void Mainmenu()
@@ -28,6 +28,11 @@ public class scene_switch : MonoBehaviour
     {
         Debug.Log("Quit game"); // Works only in build
         Application.Quit();
+    }
+
+    public void PauseGame(GameObject PauseCanves)
+    {
+        PauseCanves.SetActive(true);
     }
 
     // Move Scene

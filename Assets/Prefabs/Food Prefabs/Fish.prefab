@@ -204,12 +204,16 @@ MonoBehaviour:
   maxLaunchForce: 11
   minUpwardSpeed: 5
   maxUpwardSpeed: 8
-  GroundFoodDetectorPrefab: {fileID: 5005713008043633660, guid: c903a6f89e998284780939d884f753a7, type: 3}
+  pointTracker: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
   OnPlate: 0
   timer: 6
   CookedTime: 3
-  CookedColor: {r: 0.02990388, g: 0.10630349, b: 0.3018868, a: 1}
-  BurnedColor: {r: 0, g: 0, b: 0, a: 1}
+  overCookedTime: 1.5
+  underCookedSprite: {fileID: 0}
+  perfectCookedSprite: {fileID: 0}
+  overCookedSprite: {fileID: 0}
+  burntSprite: {fileID: 0}
+  howCookedAmI: 0
 --- !u!82 &1579452002866937730
 AudioSource:
   m_ObjectHideFlags: 0

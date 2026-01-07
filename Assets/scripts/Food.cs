@@ -11,7 +11,9 @@ public class Food : MonoBehaviour
     // private AudioSource audioSource; 
     // public AudioClip LaunchSoundEffect;
 
-    public GameObject GroundFoodDetectorPrefab;
+    public GameObject pointTracker;
+    private pointTracker pointTrackerScript;
+
     private Transform launchPoint;
 
     public bool OnPlate = false;
@@ -39,6 +41,7 @@ public class Food : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         // audioSource = GetComponent<AudioSource>();
+        pointTrackerScript = pointTracker.GetComponent<pointTracker>();
         launchPoint = transform;
         LaunchFood();
     }
@@ -75,7 +78,6 @@ public class Food : MonoBehaviour
             }
         }
 
-        Debug.Log(underCookedSprite);
         if (underCookedSprite != null) {
             switch (howCookedAmI)
             {
@@ -123,10 +125,12 @@ public class Food : MonoBehaviour
     }
 
     //if the food falls outside of the game window
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.collider.CompareTag("GroundFoodDetector"))
+        if (other.CompareTag("GroundFoodDetector"))
         {
+            Debug.Log(pointTrackerScript.Health);
+            pointTrackerScript.Health -= 1;
             Destroy(gameObject);
         }
     }
@@ -147,5 +151,10 @@ public class Food : MonoBehaviour
             Countdown = false;
             Debug.Log(timer);
         }
+    }
+
+    public void SetPointTracker(GameObject LacalPointTracker)
+    {
+        pointTracker = LacalPointTracker;
     }
 }
