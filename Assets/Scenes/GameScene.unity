@@ -2532,6 +2532,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
+      propertyPath: PanRef
+      value: 
+      objectReference: {fileID: 684461928}
+    - target: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
       propertyPath: ScoreText
       value: 
       objectReference: {fileID: 298787036826221019}
@@ -2543,6 +2547,10 @@ PrefabInstance:
       propertyPath: HealthText
       value: 
       objectReference: {fileID: 4548447142238932992}
+    - target: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
+      propertyPath: FoodLauncherRef
+      value: 
+      objectReference: {fileID: 432858913}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

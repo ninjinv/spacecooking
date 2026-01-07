@@ -3,11 +3,15 @@ using UnityEngine.UI;
 
 public class pointTracker : MonoBehaviour
 {
+    public GameObject FoodLauncherRef;
+    public GameObject PanRef;
+
     public Text ScoreText;
     public Text HealthText;
     public int Health = 20;
 
     public GameObject YouLoseUI;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -31,6 +35,8 @@ public class pointTracker : MonoBehaviour
         if (Health <= 0)
         {
             YouLoseUI.SetActive(true);
+            FoodLauncherRef.gameObject.SetActive(false);
+            PanRef.gameObject.SetActive(false);
         }
     }
 
