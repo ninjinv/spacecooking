@@ -2,32 +2,34 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    public float minLaunchForce = 2f;
-    public float maxLaunchForce = 4f;
-
-    public float minUpwardSpeed = 6f;
-    public float maxUpwardSpeed = 8f;
-
-    // private AudioSource audioSource; 
-    // public AudioClip LaunchSoundEffect;
-
     public GameObject pointTracker;
     private pointTracker pointTrackerScript;
 
-    private Transform launchPoint;
-
+    // Checks if food is on the plate
     public bool OnPlate = false;
 
+
+    [Header("Launch Force")]
+    public float minLaunchForce = 2f;
+    public float maxLaunchForce = 4f;
+    public float minUpwardSpeed = 6f;
+    public float maxUpwardSpeed = 8f;
+    private Transform launchPoint;
+
+
+    [Header("Cooked Timer")]
     private bool Countdown = false;
     public float timer = 6f;
     public float CookedTime = 3f;
     public float overCookedTime = 1.5f;
-    private SpriteRenderer spriteRenderer;
 
+
+    [Header("Cooked State Sprites")]
     public Sprite underCookedSprite;
     public Sprite perfectCookedSprite;
     public Sprite overCookedSprite;
     public Sprite burntSprite;
+    private SpriteRenderer spriteRenderer;
 
     public enum cookedStates
     {
@@ -110,10 +112,6 @@ public class Food : MonoBehaviour
 
             // Use transform.right for 2D "forward" direction, and Vector2.up for upward
             Vector2 force = (Vector2)launchPoint.right * LaunchForce + Vector2.up * UpwardSpeed;
-
-            // if (LaunchSoundEffect != null && audioSource != null) {
-            //     audioSource.PlayOneShot(LaunchSoundEffect);
-            // }
 
             // Apply the force instantly
             rb.AddForce(force, ForceMode2D.Impulse);

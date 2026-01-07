@@ -3,10 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class scene_switch : MonoBehaviour
 {
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("placegolder*");
-    }
+    // public void PlayGame()
+    // {
+    //     SceneManager.LoadScene("placegolder*");
+    // }
 
     public void resume(GameObject PauseCanves)
     {
@@ -14,11 +14,11 @@ public class scene_switch : MonoBehaviour
         PauseCanves.SetActive(false);
     }
 
-    public void Mainmenu()
-    {
-        //SceneManager.LoadScene("mainmenu");
-        Debug.Log("Mainmenu scene loading is disabled for testing purposes.");
-    }
+    // public void Mainmenu()
+    // {
+    //     //SceneManager.LoadScene("mainmenu");
+    //     Debug.Log("Mainmenu scene loading is disabled for testing purposes.");
+    // }
 
     public void Settings()
     {

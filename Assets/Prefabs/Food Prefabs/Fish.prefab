@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: e492f753ecfcc944da163e50575f3d06, type: 3}
   m_Color: {r: 0.094117634, g: 0.44129243, b: 0.44313726, a: 1}
   m_FlipX: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   maxLaunchForce: 11
   minUpwardSpeed: 5
   maxUpwardSpeed: 8
-  pointTracker: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
+  pointTracker: {fileID: 0}
   OnPlate: 0
   timer: 6
   CookedTime: 3

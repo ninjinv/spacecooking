@@ -14,28 +14,27 @@ public class pointTracker : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(playerPoints);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            Debug.Log(playerPoints);
-        }
+        // if (Input.GetKey(KeyCode.LeftShift))
+        // {
+        //     Debug.Log(playerPoints);
+        // }
         HealthText.text = "Health: " + Health;
     }
 
     public void updatePoints(int points)
     {
-        playerPoints = playerPoints + points;
-        Debug.Log("Points: " + playerPoints);
+        playerPoints += points;
         ScoreText.text = "Score: " + playerPoints;
 
         if (playerPoints >= nextLevelUp)
         {
-            nextLevelUp = nextLevelUp + 500;
+            nextLevelUp += 500;
             levelUp();
         }
     }
