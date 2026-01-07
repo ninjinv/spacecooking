@@ -127,7 +127,6 @@ public class Food : MonoBehaviour
     {
         if (other.CompareTag("GroundFoodDetector"))
         {
-            Debug.Log(pointTrackerScript.Health);
             pointTrackerScript.Health -= 1;
             Destroy(gameObject);
         }
@@ -147,7 +146,6 @@ public class Food : MonoBehaviour
         if(other.CompareTag("Pan") && Countdown)
         {
             Countdown = false;
-            Debug.Log(timer);
         }
     }
 

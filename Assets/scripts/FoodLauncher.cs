@@ -10,6 +10,7 @@ public class FoodLauncher : MonoBehaviour
     public float TimeBetweenLaunch = 1.5f;
 
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,13 +35,12 @@ public class FoodLauncher : MonoBehaviour
 
     void SpawnFood()
     {
-        float AreaWidth = boxCollider.size.x;
-        float AreaHight = boxCollider.size.y;
+        Bounds bounds = boxCollider.bounds;
 
-        float SpawnAreaX = Random.Range(-AreaWidth/2, AreaWidth/2);
-        float SpawnAreaY = Random.Range(-AreaHight/2, AreaHight/2);
+        float SpawnAreaX = Random.Range(bounds.min.x, bounds.max.x);
+        float SpawnAreaY = Random.Range(bounds.min.y, bounds.max.y);
 
-        Vector2 spawnPosition = (Vector2)transform.position + new Vector2(SpawnAreaX, SpawnAreaY);
+        Vector2 spawnPosition = new Vector2(SpawnAreaX, SpawnAreaY);
 
         int PrefabListIndex = Random.Range(0, projectilePrefabList.Count);
         GameObject projectilePrefab = projectilePrefabList[PrefabListIndex];
