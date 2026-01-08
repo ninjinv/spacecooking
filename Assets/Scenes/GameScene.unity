@@ -2624,6 +2624,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 708
       objectReference: {fileID: 0}
+    - target: {fileID: 1906910936926405642, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2289534489276651724, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
       propertyPath: gravity
       value: 
@@ -2716,6 +2720,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5083202957878413908, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6251383413087147525, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2755,6 +2763,10 @@ PrefabInstance:
     - target: {fileID: 8951491304107419404, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
       propertyPath: m_Name
       value: uiCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067246602640610798, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3039,6 +3051,10 @@ PrefabInstance:
       propertyPath: PanLeftRef
       value: 
       objectReference: {fileID: 1573948905}
+    - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
+      propertyPath: pointTrackerRef
+      value: 
+      objectReference: {fileID: 1563476624}
     - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
       propertyPath: PanLeftFlipUnlocked
       value: 1

@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
+    public GameObject pointTrackerRef;
     // Reference to objects(upgrades) and if they're unlocked
     public GameObject panLeftRef;
     public bool panLeftFlipUnlocked;
@@ -47,6 +48,10 @@ public class UpgradeManager : MonoBehaviour
         //Debug.Log("cd");
     }
 
+    void GainHealth(int amount)
+    {
+        pointTrackerRef.gameObject.GetComponent<pointTracker>().Health += amount;
+    }
 
 
     // Check for upgrade inputs & their conditions 
@@ -60,6 +65,11 @@ public class UpgradeManager : MonoBehaviour
         if ((Input.GetMouseButtonDown(1) && panRightFlipUnlocked))
         {
             FlipPanRight();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GainHealth(5);
         }
     }
 }
