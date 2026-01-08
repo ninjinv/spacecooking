@@ -53,6 +53,11 @@ public class UpgradeManager : MonoBehaviour
         pointTrackerRef.gameObject.GetComponent<pointTracker>().Health += amount;
     }
 
+    void GainScore(int amount)
+    {
+        pointTrackerRef.gameObject.GetComponent<pointTracker>().playerScore += amount;
+    }
+
 
     // Check for upgrade inputs & their conditions 
     void Update()
@@ -70,6 +75,7 @@ public class UpgradeManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GainHealth(5);
+            GainScore(1000);
         }
     }
 }
