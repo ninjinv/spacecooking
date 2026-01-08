@@ -44,8 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b944a51c74d00409f75f9ae66c947f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pointTracker
+  FoodLauncherRef: {fileID: 0}
+  PanRef: {fileID: 0}
+  playerXP: 0
+  XPText: {fileID: 0}
+  playerScore: 0
   ScoreText: {fileID: 0}
+  Health: 20
   HealthText: {fileID: 0}
-  Health: 0
-  playerPoints: 0
-  nextLevelUp: 500
+  WaveTime: 60
+  WaveTimerText: {fileID: 0}
+  YouLoseUI: {fileID: 0}
+  levelUpPanelUI: {fileID: 0}

@@ -12,15 +12,19 @@ public class pointTracker : MonoBehaviour
 
     [Header("XP")]
     public int playerXP = 0;
+    public Text XPText;
+
+    [Header("Score")]
+    public int playerScore = 0;
     public Text ScoreText;
 
     [Header("Health")]
-    public Text HealthText;
     public int Health = 20;
+    public Text HealthText;
 
     [Header("Wave Timer")]
+    public int WaveTime = 60;
     public Text WaveTimerText;
-    public int WaveTimer = 60;
     private bool TimerBool = true;
 
     [Header("UI")]
@@ -36,6 +40,7 @@ public class pointTracker : MonoBehaviour
     {
         StartCoroutine(TimerCountdown());
         FoodLauncherScript = FoodLauncherRef.GetComponent<FoodLauncher>();
+        updatePoints(0);
     }
 
     // Update is called once per frame
@@ -54,8 +59,13 @@ public class pointTracker : MonoBehaviour
 
     public void updatePoints(int points)
     {
+        // XP
         playerXP += points;
-        ScoreText.text = "XP: " + playerXP;
+        XPText.text = "XP: " + playerXP.ToString();
+
+        // Score
+        playerScore += points;
+        ScoreText.text = "Score: " + playerScore;
 
         // if (playerPoints >= nextLevelUp)
         // {
@@ -76,16 +86,16 @@ public class pointTracker : MonoBehaviour
         while (TimerBool)
         {
             // Timer between wave
-            WaveTimerText.text = WaveTimer.ToString();
+            WaveTimerText.text = WaveTime.ToString();
             yield return new WaitForSeconds(1);
-            if (WaveTimer <= 0)
+            if (WaveTime <= 0)
             {
                 levelUpPanelUI.SetActive(true);
                 FoodLauncherScript.FoodLauncherActive = false;
                 PanRef.gameObject.SetActive(false);
                 TimerBool = false;
             }
-            WaveTimer--;
+            WaveTime--;
         }
     }
 }
