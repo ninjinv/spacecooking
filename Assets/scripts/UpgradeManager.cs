@@ -33,15 +33,15 @@ public class UpgradeManager : MonoBehaviour
 
     void FlipPanRight()
     {
-        Quaternion startRotation = Quaternion.Euler(0, 0, 25);
-        Quaternion targetRotation = Quaternion.Euler(0, 0, 0);
+        Quaternion startRotation = Quaternion.Euler(0, 180, 25);
+        Quaternion targetRotation = Quaternion.Euler(0, 180, 0);
         float timeCount = .1f;
         float speed = 90f;
         IEnumerator Countdown()
         {
-            panLeftRef.transform.rotation = Quaternion.Lerp(startRotation, targetRotation, timeCount * speed);
+            panRightRef.transform.rotation = Quaternion.Lerp(startRotation, targetRotation, timeCount * speed);
             yield return new WaitForSeconds(.1f);
-            panLeftRef.transform.rotation = Quaternion.Lerp(targetRotation, startRotation, timeCount * speed);
+            panRightRef.transform.rotation = Quaternion.Lerp(targetRotation, startRotation, timeCount * speed);
         }
         StartCoroutine(Countdown());
         //Debug.Log("cd");
