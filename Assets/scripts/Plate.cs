@@ -39,22 +39,22 @@ public class Plate : MonoBehaviour
 
             if(FoodScript.howCookedAmI == Food.cookedStates.underCooked)
             {
-                Debug.Log("Undercooked!");
+                // Debug.Log("Undercooked!");
                 pointTracker.updatePoints(-50);
             }
             else if (FoodScript.howCookedAmI == Food.cookedStates.perfectCooked)
             {
-                Debug.Log("PERFECT!");
+                // Debug.Log("PERFECT!");
                 pointTracker.updatePoints(100);
             }
             if (FoodScript.howCookedAmI == Food.cookedStates.overCooked)
             {
-                Debug.Log("Overcooked!");
+                // Debug.Log("Overcooked!");
                 pointTracker.updatePoints(25);
             }
             if (FoodScript.howCookedAmI == Food.cookedStates.burnt)
             {
-                Debug.Log("BURNT!");
+                // Debug.Log("BURNT!");
                 pointTracker.updatePoints(-50);
             }
 

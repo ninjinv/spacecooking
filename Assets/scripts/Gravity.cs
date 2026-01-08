@@ -8,7 +8,7 @@ public class Gravity : MonoBehaviour
     void Start()
     {
         dimensionCountdown = Random.Range(10, 31);
-        Debug.Log(dimensionCountdown);
+        // Debug.Log(dimensionCountdown);
     }
 
     void Update()
@@ -22,7 +22,7 @@ public class Gravity : MonoBehaviour
         {
             selectNewDimension();
             dimensionCountdown = Random.Range(10, 31);
-            Debug.Log("new timer:" + dimensionCountdown);
+            // Debug.Log("new timer:" + dimensionCountdown);
         }
     }
 
@@ -47,7 +47,7 @@ public class Gravity : MonoBehaviour
         if (dimension == 1)
         {
             //dimension 1 = earth, timescale and gravity behaves like normal
-            Debug.Log("EARTH");
+            // Debug.Log("EARTH");
             Physics2D.gravity = new Vector2(0, -9.81f);
             Time.timeScale = 1f;
 
@@ -56,7 +56,7 @@ public class Gravity : MonoBehaviour
         else if (dimension == 2)
         {
             //dimension 2 = moon, timescale is reduced and gravity is reduced
-            Debug.Log("MOON");
+            // Debug.Log("MOON");
             Physics2D.gravity = new Vector2(0, -5f);
             Time.timeScale = 0.5f;
         }
@@ -64,7 +64,7 @@ public class Gravity : MonoBehaviour
         else if (dimension == 3)
         {
             //dimension 3 = upside down where everything slowly floats uwards
-            Debug.Log("UPSIDE DOWN");
+            // Debug.Log("UPSIDE DOWN");
             Physics2D.gravity = new Vector2(0, 2f);
             Time.timeScale = 1f;
         }
@@ -72,7 +72,7 @@ public class Gravity : MonoBehaviour
         else if (dimension == 4)
         {
             //dimension 4 = right-topia, where gravity is going right
-            Debug.Log("RIGHT-TOPIA");
+            // Debug.Log("RIGHT-TOPIA");
             Physics2D.gravity = new Vector2(5f, 0f);
             Time.timeScale = 0.75f;
         }

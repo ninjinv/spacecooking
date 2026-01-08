@@ -2632,7 +2632,7 @@ PrefabInstance:
       objectReference: {fileID: 298787036826221019}
     - target: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
       propertyPath: WaveTime
-      value: 60
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
       propertyPath: ScoreText
@@ -2839,6 +2839,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -3
       objectReference: {fileID: 0}
+    - target: {fileID: 8032723943778354790, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032723943778354790, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032723943778354790, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1563476625}
+    - target: {fileID: 8032723943778354790, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032723943778354790, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032723943778354790, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: pointTracker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032723943778354790, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8814921782986215248, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
       propertyPath: m_Name
       value: LevelUpTitle
@@ -2929,6 +2957,10 @@ PrefabInstance:
       propertyPath: pointTracker
       value: 
       objectReference: {fileID: 1563476624}
+    - target: {fileID: 7228630257145824145, guid: 73bc817e78049d148ab75c4fa93c4870, type: 3}
+      propertyPath: FoodLauncherActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7792699873759967898, guid: 73bc817e78049d148ab75c4fa93c4870, type: 3}
       propertyPath: m_Name
       value: Food Launcher
