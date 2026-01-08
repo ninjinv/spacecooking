@@ -58,7 +58,7 @@ public class Food : MonoBehaviour
             if (timer > 0)
             {
                 //cooking the food
-                timer -= Time.deltaTime;
+                timer -= Time.unscaledDeltaTime;
 
                 //the food has cooked the correct amount of time, so the food is updated to being perfectly cooked
                 if (timer <= CookedTime)

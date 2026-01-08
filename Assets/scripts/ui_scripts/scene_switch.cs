@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class scene_switch : MonoBehaviour
 {
+
+    public Gravity gravity;
+
     // public void PlayGame()
     // {
     //     SceneManager.LoadScene("placegolder*");
@@ -10,7 +13,8 @@ public class scene_switch : MonoBehaviour
 
     public void resume(GameObject PauseCanves)
     {
-        Time.timeScale = 1f;
+        //this will return the timescale to whatever it was previously set to
+        gravity.gravityChange(gravity.currentDimension);
         PauseCanves.SetActive(false);
     }
 
