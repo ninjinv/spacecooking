@@ -8,6 +8,7 @@ public class FoodLauncher : MonoBehaviour
     private BoxCollider2D boxCollider;
     public GameObject pointTracker;
     public float TimeBetweenLaunch = 1.5f;
+    public bool FoodLauncherActive = true;
 
 
 
@@ -26,7 +27,7 @@ public class FoodLauncher : MonoBehaviour
 
     IEnumerator Countdown()
     {
-        while (true)
+        while (FoodLauncherActive)
         {
             yield return new WaitForSeconds(TimeBetweenLaunch);
             SpawnFood();
