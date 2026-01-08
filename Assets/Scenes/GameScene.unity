@@ -914,6 +914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af5456adaa4693b4aa950b8112b04fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gravity
+  currentDimension: 1
+  dimensionCountdown: 0
 --- !u!4 &616021813
 Transform:
   m_ObjectHideFlags: 0
@@ -1032,7 +1034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &684461929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1456,11 +1458,6 @@ Transform:
   - {fileID: 2141074067}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1285238611 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9147157445799063539, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
-  m_PrefabInstance: {fileID: 4066432808823389622}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1563476624 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 222932816426921558, guid: c124c1ee892d146438ce898015794e40, type: 3}
@@ -2642,7 +2639,7 @@ PrefabInstance:
     - target: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
       propertyPath: levelUpPanelUI
       value: 
-      objectReference: {fileID: 1285238611}
+      objectReference: {fileID: 0}
     - target: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
       propertyPath: FoodLauncherRef
       value: 
@@ -2759,6 +2756,14 @@ PrefabInstance:
     - target: {fileID: 3667893192480930715, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -656.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891850609348924131, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891850609348924131, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5442453023219329080, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3078,7 +3083,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1573948905}
     - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
+      propertyPath: panLeftRef
+      value: 
+      objectReference: {fileID: 1573948905}
+    - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
+      propertyPath: panRightRef
+      value: 
+      objectReference: {fileID: 1747763854}
+    - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
       propertyPath: PanLeftFlipUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
+      propertyPath: panLeftFlipUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
+      propertyPath: panRightFlipUnlocked
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8410118005860647275, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
