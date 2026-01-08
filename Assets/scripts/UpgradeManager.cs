@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
+    // Reference to objects(upgrades) and if they're unlocked
     public GameObject PanLeftRef;
     public bool PanLeftFlipUnlocked;
 
@@ -13,6 +14,7 @@ public class UpgradeManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
     }
 
+    // Upgrade functions
     void FlipPanLeft()
     {
         PanLeftRef.transform.eulerAngles = new Vector3(0, 0, -25);
@@ -20,7 +22,9 @@ public class UpgradeManager : MonoBehaviour
         PanLeftRef.transform.eulerAngles = new Vector3(0, 0, 25);
     }
 
-    // Update is called once per frame
+
+
+    // Check for upgrade inputs & their conditions 
     void Update()
     {
         if (PanLeftFlipUnlocked & Input.GetMouseButtonDown(0))
