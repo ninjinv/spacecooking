@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class pointTracker : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class pointTracker : MonoBehaviour
     public Text WaveTimerText;
     private bool TimerBool = true;
 
+
+    private int LevelCount = 1;
+    public GameObject LevelUpTitle;
+
     [Header("UI")]
     public GameObject YouLoseUI;
     public GameObject levelUpPanelUI;
@@ -39,7 +44,7 @@ public class pointTracker : MonoBehaviour
     void Start()
     {
         StartCoroutine(TimerCountdown());
-        FoodLauncherScript = FoodLauncherRef.GetComponent<FoodLauncher>();
+        FoodLauncherScript = FoodLauncherRef.AddComponent<FoodLauncher>();
         updatePoints(0);
     }
 
@@ -51,6 +56,7 @@ public class pointTracker : MonoBehaviour
         if (Health <= 0)
         {
             YouLoseUI.SetActive(true);
+            // FoodLauncherRef.SetActive(false);
             FoodLauncherScript.FoodLauncherActive = false;
             PanRef.gameObject.SetActive(false);
         }
@@ -66,19 +72,17 @@ public class pointTracker : MonoBehaviour
         // Score
         playerScore += points;
         ScoreText.text = "Score: " + playerScore;
-
-        // if (playerPoints >= nextLevelUp)
-        // {
-        //     nextLevelUp += 500;
-        //     levelUp();
-        // }
     }
 
-    public void levelUp()
+    public void NextLevel()
     {
-        //here the game would pause, a UI would pop up to choose from some randomly selected power ups
-        //after the player has selected their ugrade, the game resumes
-        Debug.Log("You leveled up!");
+        WaveTime = 60;
+        levelUpPanelUI.SetActive(false);
+        // FoodLauncherRef.SetActive(true);
+        FoodLauncherScript.StartCountdown();
+        PanRef.gameObject.SetActive(true);
+        TimerBool = true;
+        StartCoroutine(TimerCountdown());
     }
 
     IEnumerator TimerCountdown()
@@ -91,9 +95,15 @@ public class pointTracker : MonoBehaviour
             if (WaveTime <= 0)
             {
                 levelUpPanelUI.SetActive(true);
+                // FoodLauncherRef.SetActive(false);
                 FoodLauncherScript.FoodLauncherActive = false;
                 PanRef.gameObject.SetActive(false);
                 TimerBool = false;
+
+                // Change Level up panal title
+                LevelCount++;
+                TextMeshProUGUI levelUpText = LevelUpTitle.GetComponentInChildren<TextMeshProUGUI>();
+                levelUpText.text = "WAVE " + LevelCount.ToString();
             }
             WaveTime--;
         }

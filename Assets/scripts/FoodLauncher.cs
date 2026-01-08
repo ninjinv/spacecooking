@@ -25,6 +25,12 @@ public class FoodLauncher : MonoBehaviour
 
     }
 
+    public void StartCountdown()
+    {
+        FoodLauncherActive = true;
+        StartCoroutine(Countdown());
+    }
+
     IEnumerator Countdown()
     {
         while (FoodLauncherActive)

@@ -2561,7 +2561,7 @@ PrefabInstance:
       objectReference: {fileID: 298787036826221019}
     - target: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
       propertyPath: WaveTime
-      value: 5
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
       propertyPath: ScoreText
@@ -2575,6 +2575,10 @@ PrefabInstance:
       propertyPath: HealthText
       value: 
       objectReference: {fileID: 4548447142238932992}
+    - target: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
+      propertyPath: LevelUpTitle
+      value: 
+      objectReference: {fileID: 4066432808823389624}
     - target: {fileID: 6586226528003795653, guid: c124c1ee892d146438ce898015794e40, type: 3}
       propertyPath: WaveTimerText
       value: 
@@ -2720,6 +2724,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4614190978698069646, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5083202957878413908, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2760,6 +2768,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -3
       objectReference: {fileID: 0}
+    - target: {fileID: 8814921782986215248, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+      propertyPath: m_Name
+      value: LevelUpTitle
+      objectReference: {fileID: 0}
     - target: {fileID: 8951491304107419404, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
       propertyPath: m_Name
       value: uiCanvas
@@ -2776,6 +2788,11 @@ PrefabInstance:
 --- !u!1 &4066432808823389623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4614190978698069646, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
+  m_PrefabInstance: {fileID: 4066432808823389622}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4066432808823389624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8814921782986215248, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
   m_PrefabInstance: {fileID: 4066432808823389622}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &4548447142238932992 stripped
