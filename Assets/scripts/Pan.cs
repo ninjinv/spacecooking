@@ -16,6 +16,11 @@ public class Pan : MonoBehaviour
     {
         mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-        transform.position = Vector2.Lerp(transform.position, mousePos, panSpeed);
+
+        if (Time.timeScale != 0)
+        {
+            transform.position = Vector2.Lerp(transform.position, mousePos, panSpeed);
+        }
+
     }
 }
