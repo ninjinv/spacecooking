@@ -7,6 +7,7 @@ using UnityEngine;
 public class UpgradeManager : MonoBehaviour
 {
     public GameObject pointTrackerRef;
+    public GameObject panWholeRef;
     // Reference to objects(upgrades) and if they're unlocked
     public GameObject panLeftRef;
     public bool panLeftFlipUnlocked;
@@ -58,6 +59,52 @@ public class UpgradeManager : MonoBehaviour
         pointTrackerRef.gameObject.GetComponent<pointTracker>().playerScore += amount;
     }
 
+    void RefreshUpgrades()
+    {
+
+    }
+
+    void AddPlate()
+    {
+
+    }
+
+    void TrashCan()
+    {
+
+    }
+
+    void IncreasePanSize(int amount)
+    {
+        //float size = panWholeRef.transform.localScale.y;
+        //size += amount;
+        panWholeRef.transform.localScale += new Vector3(3, 0, 0);
+    }
+
+    void Bib()
+    {
+
+    }
+
+    void Bob()
+    {
+
+    }
+
+    void IncreaseFoodOvercookedTimer()
+    {
+
+    }
+
+    void Snalien()
+    {
+
+    }
+
+    void BottomHover()
+    {
+
+    }
 
     // Check for upgrade inputs & their conditions 
     void Update()
@@ -76,6 +123,7 @@ public class UpgradeManager : MonoBehaviour
         {
             GainHealth(5);
             GainScore(1000);
+            IncreasePanSize(3);
         }
     }
 }

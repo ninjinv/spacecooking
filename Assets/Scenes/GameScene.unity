@@ -3069,6 +3069,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1573948905}
     - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
+      propertyPath: panWholeRef
+      value: 
+      objectReference: {fileID: 363818612}
+    - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
       propertyPath: pointTrackerRef
       value: 
       objectReference: {fileID: 1563476624}
