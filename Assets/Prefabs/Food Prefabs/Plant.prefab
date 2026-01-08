@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 597673956051672586}
   - component: {fileID: 2874418377202475685}
-  - component: {fileID: 5396631068882768508}
+  - component: {fileID: 3604992873200125975}
   - component: {fileID: 4620781731321651749}
   - component: {fileID: 6238109970333160635}
   - component: {fileID: 1579452002866937730}
   m_Layer: 0
-  m_Name: Fish
+  m_Name: Plant
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.5311, z: 1}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -2413806693520163455, guid: e492f753ecfcc944da163e50575f3d06, type: 3}
-  m_Color: {r: 0.094117634, g: 0.44129243, b: 0.44313726, a: 1}
+  m_Sprite: {fileID: 3042657437855246747, guid: 78bb7071810075147951d202833f810a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,8 +94,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &5396631068882768508
-PolygonCollider2D:
+--- !u!58 &3604992873200125975
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -129,38 +129,7 @@ PolygonCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.15234375, y: 0.47265625}
-      - {x: -0.29296875, y: 0.40234375}
-      - {x: -0.40234375, y: 0.29296875}
-      - {x: -0.47265625, y: 0.15234375}
-      - {x: -0.5, y: 0}
-      - {x: -0.47265625, y: -0.15234375}
-      - {x: -0.40234375, y: -0.29296875}
-      - {x: -0.29296875, y: -0.40234375}
-      - {x: -0.15234375, y: -0.47265625}
-      - {x: 0, y: -0.5}
-      - {x: 0.15234375, y: -0.47265625}
-      - {x: 0.29296875, y: -0.40234375}
-      - {x: 0.40234375, y: -0.29296875}
-      - {x: 0.47265625, y: -0.15234375}
-      - {x: 0.5, y: 0}
-      - {x: 0.47265625, y: 0.15234375}
-      - {x: 0.40234375, y: 0.29296875}
-      - {x: 0.29296875, y: 0.40234375}
-      - {x: 0.15234375, y: 0.47265625}
-  m_UseDelaunayMesh: 0
+  m_Radius: 1.51
 --- !u!50 &4620781731321651749
 Rigidbody2D:
   serializedVersion: 5
@@ -200,19 +169,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff1ddd7a5bf5024ca0c5fd524110f3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Food
+  pointTracker: {fileID: 0}
+  OnPlate: 0
   minLaunchForce: 6
   maxLaunchForce: 11
   minUpwardSpeed: 5
   maxUpwardSpeed: 8
-  pointTracker: {fileID: 0}
-  OnPlate: 0
   timer: 6
   CookedTime: 3
   overCookedTime: 1.5
-  underCookedSprite: {fileID: 0}
-  perfectCookedSprite: {fileID: 0}
-  overCookedSprite: {fileID: 0}
-  burntSprite: {fileID: 0}
+  underCookedSprite: {fileID: -2225942082661296427, guid: 102c1f1d70ee4884183aa640b3308744, type: 3}
+  perfectCookedSprite: {fileID: 3730743122818146680, guid: 2f2798ca71a8a6c499597d11d4fcfd58, type: 3}
+  overCookedSprite: {fileID: 7226978114451495601, guid: 97f1068c4e7cd944497bb20b6d5cad8e, type: 3}
+  burntSprite: {fileID: -5892450316752806653, guid: b94ebfbcacf5f1c42946c7551086428f, type: 3}
   howCookedAmI: 0
 --- !u!82 &1579452002866937730
 AudioSource:
@@ -225,7 +194,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 86d8aba49befd5543b1cd371fb098245, type: 3}
+  m_Resource: {fileID: 8300000, guid: 7b9a0e670de72e149945c44219f00fe8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -235,7 +204,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.6799502
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
