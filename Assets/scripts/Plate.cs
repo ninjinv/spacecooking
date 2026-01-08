@@ -11,6 +11,8 @@ public class Plate : MonoBehaviour
 
     public pointTracker pointTracker;
 
+    private bool PlateActive = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,12 +28,12 @@ public class Plate : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Food"))
+        if (other.CompareTag("Food") && PlateActive == true)
         {
             other.transform.parent = gameObject.transform;
             other.GetComponent<Rigidbody2D>().simulated = false;
             other.transform.localPosition = new Vector3(0, 0, 0);
-            other.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+            other.transform.localScale = new Vector3(0.3f, 0.3f, 1f);
             Food FoodScript = other.GetComponent<Food>();
             FoodScript.OnPlate = true;
 
@@ -57,12 +59,12 @@ public class Plate : MonoBehaviour
             }
 
             StartCoroutine(PlateCountdown());
-
         }
     }
 
     IEnumerator PlateCountdown()
     {
+        PlateActive = false;
         yield return new WaitForSeconds(0.7f);
         Vector2 start = rb.position;
         Vector2 target = start + Vector2.right * 2f;
@@ -97,5 +99,6 @@ public class Plate : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
+        PlateActive = true;
     }
 }
