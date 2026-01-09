@@ -60,6 +60,8 @@ public class pointTracker : MonoBehaviour
             FoodLauncherScript.FoodLauncherActive = false;
             PanRef.gameObject.SetActive(false);
         }
+        XPText.text = "XP: " + playerXP.ToString();
+        ScoreText.text = "Score: " + playerScore.ToString();
 
     }
 
@@ -71,7 +73,7 @@ public class pointTracker : MonoBehaviour
 
         // Score
         playerScore += points;
-        ScoreText.text = "Score: " + playerScore;
+        ScoreText.text = "Score: " + playerScore.ToString();
     }
 
     public void NextLevel()

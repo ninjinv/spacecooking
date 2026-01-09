@@ -1882,6 +1882,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5046119968904690627, guid: 8bee3288fff2f9d47b66e885d59e21fe, type: 3}
   m_PrefabInstance: {fileID: 1594684044}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1594684046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138176393390704685, guid: 8bee3288fff2f9d47b66e885d59e21fe, type: 3}
+  m_PrefabInstance: {fileID: 1594684044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054fcd32172083a429f777eff5497fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plate
 --- !u!1 &1747763854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,6 +2132,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5046119968904690627, guid: 8bee3288fff2f9d47b66e885d59e21fe, type: 3}
   m_PrefabInstance: {fileID: 1805223106}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1805223108 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138176393390704685, guid: 8bee3288fff2f9d47b66e885d59e21fe, type: 3}
+  m_PrefabInstance: {fileID: 1805223106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054fcd32172083a429f777eff5497fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plate
 --- !u!1 &1911192721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,6 +2749,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5046119968904690627, guid: 8bee3288fff2f9d47b66e885d59e21fe, type: 3}
   m_PrefabInstance: {fileID: 2141074066}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2141074068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138176393390704685, guid: 8bee3288fff2f9d47b66e885d59e21fe, type: 3}
+  m_PrefabInstance: {fileID: 2141074066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054fcd32172083a429f777eff5497fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plate
 --- !u!1001 &2143666444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2866,6 +2899,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5046119968904690627, guid: 8bee3288fff2f9d47b66e885d59e21fe, type: 3}
   m_PrefabInstance: {fileID: 1390341892495216811}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1390341892495216813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138176393390704685, guid: 8bee3288fff2f9d47b66e885d59e21fe, type: 3}
+  m_PrefabInstance: {fileID: 1390341892495216811}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054fcd32172083a429f777eff5497fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plate
 --- !u!1001 &1960085459717713171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3337,7 +3381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4614190978698069646, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4738868915234229441, guid: d6a52a43dec2f3d4e9536bc655dcc368, type: 3}
       propertyPath: m_text
@@ -3925,6 +3969,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1563476624}
     - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
+      propertyPath: plates.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
       propertyPath: PanLeftFlipUnlocked
       value: 1
       objectReference: {fileID: 0}
@@ -3940,6 +3988,22 @@ PrefabInstance:
       propertyPath: panRightFlipUnlocked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
+      propertyPath: 'plates.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1390341892495216813}
+    - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
+      propertyPath: 'plates.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1594684046}
+    - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
+      propertyPath: 'plates.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1805223108}
+    - target: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
+      propertyPath: 'plates.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2141074068}
     - target: {fileID: 8410118005860647275, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
       propertyPath: m_Name
       value: UpgradesManager

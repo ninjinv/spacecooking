@@ -22,7 +22,8 @@ public class UpgradeManager : MonoBehaviour
     public float cookingTime = 6f;
 
     // plate
-    public Plate plate;
+    // public Plate plate;
+    public List<Plate> plates;
 
 
     void Start()
@@ -82,8 +83,11 @@ public class UpgradeManager : MonoBehaviour
         Debug.Log(PointTracker.playerXP + "   " + price);
         if (PointTracker.playerXP >= price) {
             PointTracker.playerXP -= price;
-            plate.perfectCookedPoints = 150;
-            plate.overCookedPoints = 50;
+            foreach (Plate plate in plates)
+            {
+                plate.perfectCookedPoints += 50;
+                plate.overCookedPoints += 25;
+            }
         }
     }
 

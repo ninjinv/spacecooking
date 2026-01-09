@@ -9,6 +9,7 @@ public class Food : MonoBehaviour
     public bool OnPlate = false;
 
     // Upgrade Manager
+    public GameObject UpgradeManagerRef;
     public UpgradeManager UpgradeManagerScript;
 
 
@@ -44,12 +45,12 @@ public class Food : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        UpgradeManagerScript = FindFirstObjectByType<UpgradeManager>();
+
         spriteRenderer = GetComponent<SpriteRenderer>();
-        // audioSource = GetComponent<AudioSource>();
         pointTrackerScript = pointTracker.GetComponent<pointTracker>();
         launchPoint = transform;
         timer = UpgradeManagerScript.cookingTime;
-        Debug.Log(timer);
         LaunchFood();
     }
 
