@@ -64,7 +64,7 @@ public class UpgradeManager : MonoBehaviour
     {
         Debug.Log(PointTracker.playerXP + "   " + price);
         if (PointTracker.playerXP >= price) {
-            PointTracker.playerXP =- price;
+            PointTracker.playerXP -= price;
             pointTrackerRef.gameObject.GetComponent<pointTracker>().Health += 5;
         }
     }
@@ -78,7 +78,7 @@ public class UpgradeManager : MonoBehaviour
     {
         Debug.Log(PointTracker.playerXP + "   " + price);
         if (PointTracker.playerXP >= price) {
-            PointTracker.playerXP =- price;
+            PointTracker.playerXP -= price;
             plate.perfectCookedPoints = 150;
             plate.overCookedPoints = 50;
         }
@@ -103,7 +103,7 @@ public class UpgradeManager : MonoBehaviour
     {
         Debug.Log(PointTracker.playerXP + "   " + price);
         if (PointTracker.playerXP >= price) {
-            PointTracker.playerXP =- price;
+            PointTracker.playerXP -= price;
             cookingTime = 5f;
         }
     }
@@ -112,7 +112,7 @@ public class UpgradeManager : MonoBehaviour
     {
         Debug.Log(PointTracker.playerXP + "   " + price);
         if (PointTracker.playerXP >= price) {
-            PointTracker.playerXP =- price;
+            PointTracker.playerXP -= price;
             panWholeRef.transform.localScale += new Vector3(0.1f, 0.2f, 1);
         }
     }
@@ -121,8 +121,8 @@ public class UpgradeManager : MonoBehaviour
     {
         Debug.Log(PointTracker.playerXP + "   " + price);
         if (PointTracker.playerXP >= price) {
-            PointTracker.playerXP =- price;
-            PointTracker.defaultWaveTime =- 5;
+            PointTracker.playerXP -= price;
+            PointTracker.defaultWaveTime -= 5;
         }
     }
 
@@ -164,11 +164,11 @@ public class UpgradeManager : MonoBehaviour
             FlipPanRight();
         }
 
-        // if (Input.GetKeyDown(KeyCode.Space))
-        // {
-        //     GainHealth(5);
-        //     GainScore(1000);
-        //     IncreasePanSize(3);
-        // }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GainHealth(5);
+            GainScore(1000);
+            IncreasePanSize(3);
+        }
     }
 }
