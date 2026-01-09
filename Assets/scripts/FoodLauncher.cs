@@ -7,8 +7,8 @@ public class FoodLauncher : MonoBehaviour
     public List<GameObject> projectilePrefabList;
     private BoxCollider2D boxCollider;
     public GameObject pointTracker;
-    public float MinTimeBetweenLaunch = 1.5f;
-    public float MaxTimeBetweenLaunch = 2.5f;
+    public float MinTimeBetweenLaunch = 4f;
+    public float MaxTimeBetweenLaunch = 8f;
     public bool FoodLauncherActive = true;
 
     // public float cookingTime = 6f;

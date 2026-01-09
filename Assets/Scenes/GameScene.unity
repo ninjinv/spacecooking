@@ -3458,11 +3458,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7228630257145824145, guid: 73bc817e78049d148ab75c4fa93c4870, type: 3}
       propertyPath: MaxTimeBetweenLaunch
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7228630257145824145, guid: 73bc817e78049d148ab75c4fa93c4870, type: 3}
       propertyPath: MinTimeBetweenLaunch
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7792699873759967898, guid: 73bc817e78049d148ab75c4fa93c4870, type: 3}
       propertyPath: m_Name

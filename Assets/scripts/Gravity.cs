@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Gravity : MonoBehaviour
 {
-    public int currentDimension = 1;
+    public int currentDimension = 4;
     public float dimensionCountdown;
     void Start()
     {
@@ -48,8 +48,8 @@ public class Gravity : MonoBehaviour
         {
             //dimension 1 = earth, timescale and gravity behaves like normal
             // Debug.Log("EARTH");
-            Physics2D.gravity = new Vector2(0, -9.81f);
-            Time.timeScale = 1f;
+            Physics2D.gravity = new Vector2(0, -6f);
+            Time.timeScale = 0.75f;
 
         }
 
@@ -57,7 +57,7 @@ public class Gravity : MonoBehaviour
         {
             //dimension 2 = moon, timescale is reduced and gravity is reduced
             // Debug.Log("MOON");
-            Physics2D.gravity = new Vector2(0, -5f);
+            Physics2D.gravity = new Vector2(0, -4f);
             Time.timeScale = 0.5f;
         }
 
@@ -65,16 +65,16 @@ public class Gravity : MonoBehaviour
         {
             //dimension 3 = upside down where everything slowly floats uwards
             // Debug.Log("UPSIDE DOWN");
-            Physics2D.gravity = new Vector2(0, 2f);
-            Time.timeScale = 1f;
+            Physics2D.gravity = new Vector2(0, 3f);
+            Time.timeScale = 0.5f;
         }
 
         else if (dimension == 4)
         {
             //dimension 4 = right-topia, where gravity is going right
             // Debug.Log("RIGHT-TOPIA");
-            Physics2D.gravity = new Vector2(5f, 0f);
-            Time.timeScale = 0.75f;
+            Physics2D.gravity = new Vector2(0f, 3f);
+            Time.timeScale = 1.5f;
         }
 
         else
