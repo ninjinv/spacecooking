@@ -15,6 +15,9 @@ public class UpgradeManager : MonoBehaviour
     public GameObject panRightRef;
     public bool panRightFlipUnlocked;
 
+    public GameObject bottomHoverRef;
+    public bool bottomHoverUnlocked;
+
     private pointTracker PointTracker;
     public float cookingTime = 6f;
 
@@ -152,7 +155,7 @@ public class UpgradeManager : MonoBehaviour
 
     void BottomHover()
     {
-
+        bottomHoverRef.SetActive(true);
     }
 
     // Check for upgrade inputs & their conditions 
@@ -166,6 +169,11 @@ public class UpgradeManager : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && panRightFlipUnlocked)
         {
             FlipPanRight();
+        }
+
+        if (bottomHoverUnlocked)
+        {
+            BottomHover();
         }
 
         // if (Input.GetKeyDown(KeyCode.Space))
