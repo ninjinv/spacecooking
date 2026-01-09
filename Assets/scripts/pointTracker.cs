@@ -26,7 +26,7 @@ public class pointTracker : MonoBehaviour
     [Header("Wave Timer")]
     public int WaveTime = 60;
     public Text WaveTimerText;
-    private int defaultWaveTime;
+    public int defaultWaveTime;
     private bool TimerBool = true;
 
 
@@ -37,6 +37,7 @@ public class pointTracker : MonoBehaviour
     public GameObject YouLoseUI;
     public GameObject levelUpPanelUI;
 
+    [Header("Gravity")]
     public Gravity gravity;
     
 
@@ -82,6 +83,7 @@ public class pointTracker : MonoBehaviour
         FoodLauncherScript.StartCountdown();
         PanRef.gameObject.SetActive(true);
         TimerBool = true;
+        gravity.gravityChange(gravity.currentDimension);
         StartCoroutine(TimerCountdown());
     }
 
@@ -94,7 +96,6 @@ public class pointTracker : MonoBehaviour
             yield return new WaitForSeconds(1);
             if (WaveTime <= 0)
             {
-                Debug.Log("LEvel up started");
                 Time.timeScale = 0f;
                 levelUpPanelUI.SetActive(true);
                 FoodLauncherScript.FoodLauncherActive = false;
