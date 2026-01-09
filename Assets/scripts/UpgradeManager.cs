@@ -19,7 +19,7 @@ public class UpgradeManager : MonoBehaviour
     // Upgrade functions
     void FlipPanLeft()
     {
-        Quaternion startRotation = Quaternion.Euler(0, 0, 25);
+        Quaternion startRotation = Quaternion.Euler(0, 0, 50);
         Quaternion targetRotation = Quaternion.Euler(0, 0, 0);
         float timeCount = .1f;
         float speed = 90f;
@@ -35,7 +35,7 @@ public class UpgradeManager : MonoBehaviour
 
     void FlipPanRight()
     {
-        Quaternion startRotation = Quaternion.Euler(0, 180, 25);
+        Quaternion startRotation = Quaternion.Euler(0, 180, 50);
         Quaternion targetRotation = Quaternion.Euler(0, 180, 0);
         float timeCount = .1f;
         float speed = 90f;
@@ -74,11 +74,9 @@ public class UpgradeManager : MonoBehaviour
 
     }
 
-    void IncreasePanSize(int amount)
+    void IncreasePanSize(float amount)
     {
-        //float size = panWholeRef.transform.localScale.y;
-        //size += amount;
-        panWholeRef.transform.localScale += new Vector3(3, 0, 0);
+        panWholeRef.transform.localScale += new Vector3(amount, amount, amount);
     }
 
     void Bib()
@@ -123,7 +121,7 @@ public class UpgradeManager : MonoBehaviour
         {
             GainHealth(5);
             GainScore(1000);
-            IncreasePanSize(3);
+            IncreasePanSize(.10f);
         }
     }
 }
