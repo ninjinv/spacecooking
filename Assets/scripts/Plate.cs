@@ -49,13 +49,11 @@ public class Plate : MonoBehaviour
             {
                 // Debug.Log("PERFECT!");
                 pointTracker.updatePoints(perfectCookedPoints);
-                Debug.Log(perfectCookedPoints);
             }
             if (FoodScript.howCookedAmI == Food.cookedStates.overCooked)
             {
                 // Debug.Log("Overcooked!");
                 pointTracker.updatePoints(overCookedPoints);
-                Debug.Log(overCookedPoints);
             }
             if (FoodScript.howCookedAmI == Food.cookedStates.burnt)
             {
