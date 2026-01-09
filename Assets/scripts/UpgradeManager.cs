@@ -117,6 +117,15 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
+    public void DecreaseWaveTime(int price)
+    {
+        Debug.Log(PointTracker.playerXP + "   " + price);
+        if (PointTracker.playerXP >= price) {
+            PointTracker.playerXP =- price;
+            PointTracker.defaultWaveTime =- 5;
+        }
+    }
+
     void Bib()
     {
 

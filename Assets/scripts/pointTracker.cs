@@ -26,7 +26,7 @@ public class pointTracker : MonoBehaviour
     [Header("Wave Timer")]
     public int WaveTime = 60;
     public Text WaveTimerText;
-    private int defaultWaveTime;
+    public int defaultWaveTime;
     private bool TimerBool = true;
 
 
