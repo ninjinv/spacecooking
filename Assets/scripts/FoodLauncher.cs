@@ -11,6 +11,8 @@ public class FoodLauncher : MonoBehaviour
     public float MaxTimeBetweenLaunch = 2.5f;
     public bool FoodLauncherActive = true;
 
+    // public float cookingTime = 6f;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

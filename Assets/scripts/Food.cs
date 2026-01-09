@@ -8,6 +8,9 @@ public class Food : MonoBehaviour
     // Checks if food is on the plate
     public bool OnPlate = false;
 
+    // Upgrade Manager
+    public UpgradeManager UpgradeManagerScript;
+
 
     [Header("Launch Force")]
     public float minLaunchForce = 2f;
@@ -45,6 +48,8 @@ public class Food : MonoBehaviour
         // audioSource = GetComponent<AudioSource>();
         pointTrackerScript = pointTracker.GetComponent<pointTracker>();
         launchPoint = transform;
+        timer = UpgradeManagerScript.cookingTime;
+        Debug.Log(timer);
         LaunchFood();
     }
 

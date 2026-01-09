@@ -36,6 +36,9 @@ public class pointTracker : MonoBehaviour
     [Header("UI")]
     public GameObject YouLoseUI;
     public GameObject levelUpPanelUI;
+
+    [Header("Gravity")]
+    public Gravity gravity;
     
 
     void Start()
@@ -79,6 +82,7 @@ public class pointTracker : MonoBehaviour
         FoodLauncherScript.StartCountdown();
         PanRef.gameObject.SetActive(true);
         TimerBool = true;
+        gravity.gravityChange(gravity.currentDimension);
         StartCoroutine(TimerCountdown());
     }
 
@@ -91,6 +95,7 @@ public class pointTracker : MonoBehaviour
             yield return new WaitForSeconds(1);
             if (WaveTime <= 0)
             {
+                Time.timeScale = 0f;
                 levelUpPanelUI.SetActive(true);
                 FoodLauncherScript.FoodLauncherActive = false;
                 PanRef.gameObject.SetActive(false);

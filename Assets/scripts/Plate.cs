@@ -11,6 +11,9 @@ public class Plate : MonoBehaviour
 
     public pointTracker pointTracker;
 
+    public int perfectCookedPoints = 100;
+    public int overCookedPoints = 25;
+
     private bool PlateActive = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -45,12 +48,14 @@ public class Plate : MonoBehaviour
             else if (FoodScript.howCookedAmI == Food.cookedStates.perfectCooked)
             {
                 // Debug.Log("PERFECT!");
-                pointTracker.updatePoints(100);
+                pointTracker.updatePoints(perfectCookedPoints);
+                Debug.Log(perfectCookedPoints);
             }
             if (FoodScript.howCookedAmI == Food.cookedStates.overCooked)
             {
                 // Debug.Log("Overcooked!");
-                pointTracker.updatePoints(25);
+                pointTracker.updatePoints(overCookedPoints);
+                Debug.Log(overCookedPoints);
             }
             if (FoodScript.howCookedAmI == Food.cookedStates.burnt)
             {

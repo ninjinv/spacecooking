@@ -15,6 +15,17 @@ public class UpgradeManager : MonoBehaviour
     public GameObject panRightRef;
     public bool panRightFlipUnlocked;
 
+    private pointTracker PointTracker;
+    public float cookingTime = 6f;
+
+    // plate
+    public Plate plate;
+
+
+    void Start()
+    {
+        PointTracker = pointTrackerRef.GetComponent<pointTracker>();
+    }
 
     // Upgrade functions
     void FlipPanLeft()
@@ -49,14 +60,28 @@ public class UpgradeManager : MonoBehaviour
         //Debug.Log("cd");
     }
 
-    void GainHealth(int amount)
+    public void GainHealth(int price)
     {
-        pointTrackerRef.gameObject.GetComponent<pointTracker>().Health += amount;
+        Debug.Log(PointTracker.playerXP + "   " + price);
+        if (PointTracker.playerXP >= price) {
+            PointTracker.playerXP =- price;
+            pointTrackerRef.gameObject.GetComponent<pointTracker>().Health += 5;
+        }
     }
 
-    void GainScore(int amount)
+    public void GainScore(int amount)
     {
         pointTrackerRef.gameObject.GetComponent<pointTracker>().playerScore += amount;
+    }
+
+    public void DishXPIncrease(int price)
+    {
+        Debug.Log(PointTracker.playerXP + "   " + price);
+        if (PointTracker.playerXP >= price) {
+            PointTracker.playerXP =- price;
+            plate.perfectCookedPoints = 150;
+            plate.overCookedPoints = 50;
+        }
     }
 
     void RefreshUpgrades()
@@ -74,11 +99,22 @@ public class UpgradeManager : MonoBehaviour
 
     }
 
-    void IncreasePanSize(int amount)
+    public void IncreaseCookingSpeed(int price)
     {
-        //float size = panWholeRef.transform.localScale.y;
-        //size += amount;
-        panWholeRef.transform.localScale += new Vector3(3, 0, 0);
+        Debug.Log(PointTracker.playerXP + "   " + price);
+        if (PointTracker.playerXP >= price) {
+            PointTracker.playerXP =- price;
+            cookingTime = 5f;
+        }
+    }
+
+    public void IncreasePanSize(int price)
+    {
+        Debug.Log(PointTracker.playerXP + "   " + price);
+        if (PointTracker.playerXP >= price) {
+            PointTracker.playerXP =- price;
+            panWholeRef.transform.localScale += new Vector3(0.1f, 0.2f, 1);
+        }
     }
 
     void Bib()
@@ -109,21 +145,21 @@ public class UpgradeManager : MonoBehaviour
     // Check for upgrade inputs & their conditions 
     void Update()
     {
-        if ((Input.GetMouseButtonDown(0) && panLeftFlipUnlocked))
+        if (Input.GetMouseButtonDown(0) && panLeftFlipUnlocked)
         {
             FlipPanLeft();
         }
 
-        if ((Input.GetMouseButtonDown(1) && panRightFlipUnlocked))
+        if (Input.GetMouseButtonDown(1) && panRightFlipUnlocked)
         {
             FlipPanRight();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GainHealth(5);
-            GainScore(1000);
-            IncreasePanSize(3);
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     GainHealth(5);
+        //     GainScore(1000);
+        //     IncreasePanSize(3);
+        // }
     }
 }

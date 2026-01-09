@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Food
   pointTracker: {fileID: 0}
   OnPlate: 0
+  UpgradeManagerScript: {fileID: 4531914518080224528, guid: 75e4cbe5798784444a9cf4ae87c7efc7, type: 3}
   minLaunchForce: 6
   maxLaunchForce: 11
   minUpwardSpeed: 5
